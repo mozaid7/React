@@ -13,6 +13,11 @@ function App() {
     //counter += 1
     if (counter < 30) {
       setCounter(counter + 1)
+      // it will not take all the below functions in a batch and will process each function as an individual function because we have added a prevCounter which will return the value from the previous function. 
+      setCounter(prevCounter => prevCounter + 1)
+      setCounter(prevCounter => prevCounter + 1)
+      setCounter(prevCounter => prevCounter + 1)
+      setCounter(prevCounter => prevCounter + 1)
     }
   }
 
