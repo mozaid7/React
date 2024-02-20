@@ -31,8 +31,17 @@ function App() {
             backgroundImage: `url('https://images.pexels.com/photos/47344/dollar-currency-money-us-dollar-47344.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')`,
         }}
     >
-        <div className="w-full">
+        <div className="flex flex-wrap justify-center items-center">
+            <div>
+            <div className='border rounded-full bg-cover bg-no-repeat'
+            style={{
+                backgroundImage: `url('https://img.freepik.com/free-vector/hand-drawn-cartoon-dollar-sign-illustration_23-2150927138.jpg?w=740&t=st=1708458625~exp=1708459225~hmac=226a6c08cdf4a6ff112bb9330f4349b08118948447c4b849fbccecc88eabe7a1')`, height:190, width:190, margin:24
+            }}
+            ></div>
+            </div>
+           
             <div className="w-full max-w-md mx-auto border border-gray-60 rounded-lg p-5 backdrop-blur-sm bg-white/30">
+
                 <form
                     onSubmit={(e) => {
                         e.preventDefault();
