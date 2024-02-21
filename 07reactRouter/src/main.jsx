@@ -9,7 +9,17 @@ import Layout from './Layout.jsx'
 const router = createBrowserRouter ([
   {
     path: '/',
-    element: <Layout />
+    element: <Layout />,
+    children: [
+      {
+        path: "",
+        element: <Home/>
+      },
+      {
+        path: "about",
+        element: <About/>
+      }
+    ]
   }
 ])
 
