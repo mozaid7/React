@@ -12,7 +12,7 @@ function AddTodo() {
         setInput('')
     }
 
-
+// Form designing part
 
 return (
     <form onSubmit={addTodoHandler} className="space-x-3 mt-12">
