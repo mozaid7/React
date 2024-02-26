@@ -13,8 +13,27 @@ export default function TextForm(props) {
         props.showAlert("Converted to lowercase!", "success");
     }
 
+    const handleClearClick = ()=>{ 
+        let newText = '';
+        setText(newText);
+        props.showAlert("Text Cleared!", "success");
+    }
+
     const handleOnChange = (event)=>{
         setText(event.target.value) 
+    }
+
+     // Credits: A
+     const handleCopy = () => {
+        navigator.clipboard.writeText(text); 
+        props.showAlert("Copied to Clipboard!", "success");
+    }
+
+    // Credits: Coding Wala
+    const handleExtraSpaces = () => {
+        let newText = text.split(/[ ]+/);
+        setText(newText.join(" "));
+        props.showAlert("Extra spaces removed!", "success");
     }
 
     const [text, setText] = useState('');
