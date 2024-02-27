@@ -7,7 +7,8 @@ import Alert from './components/Alert';
 import {
   BrowserRouter as Router,
   Switch,
-  Route
+  Route,
+  Link
 } from "react-router-dom";
 
  
