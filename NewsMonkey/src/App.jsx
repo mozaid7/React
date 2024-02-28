@@ -1,4 +1,5 @@
 import Navbar from '../Components/Navbar'
+import News from '../Components/News'
 import './App.css'
 
 
@@ -9,6 +10,7 @@ import './App.css'
       return (
         <div>
           <Navbar/>
+          <News/>
         </div>
       )
     }
