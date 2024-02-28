@@ -1,3 +1,4 @@
+import Navbar from '../Components/Navbar'
 import './App.css'
 
 
@@ -7,7 +8,7 @@ import './App.css'
     render() {
       return (
         <div>
-          Hello this is my first class baded component.
+          <Navbar/>
         </div>
       )
     }
