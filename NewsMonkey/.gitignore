@@ -11,6 +11,7 @@ node_modules
 dist
 dist-ssr
 *.local
+// This is necessary for WebStorm to recognize the
 
 # Editor directories and files
 .vscode/*
