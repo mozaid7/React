@@ -12,9 +12,19 @@ function App() {
     completed: true
   }]);
 
+  function addTodo() {
+    setTodos([...todos, {
+      title: "new todo",
+      description: "desc of new todo"
+    }])
+  }
+  
   return (
     <div>
-      <Todo title="HArkirat" description="harkira43@"></Todo>
+      <button onClick={addTodo}>Add a random todo</button>
+      {todos.map(function(todo) {
+        return <Todo title={todo.title} description={todo.description} />
+      })}
     </div>
   )
 }
