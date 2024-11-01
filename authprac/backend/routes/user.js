@@ -59,14 +59,14 @@ router.post("/signup", async(req,res) => {
 
 const signinBody = zod.object({
     username: zod.string().email(),
-	firstName: zod.string(),
+	password: zod.string(),
 })
 
 router.post("/signin", async(req,res) => {
     const { success } = signinBody.safeParse(req.body);
 
     if (!success) {
-        res.status(411).json({
+        return res.status(411).json({
             msg: "Input is Invalid"
         });
     }
@@ -78,12 +78,11 @@ router.post("/signin", async(req,res) => {
 
     if(user) {
         const token = jwt.sign({userId: user._id}, key);
-        res.json({
+        return res.json({
             token
         })
-        return
     }
-    res.status(411).json({
+     return res.status(411).json({
         message: "Error while logging in"
     })
 })

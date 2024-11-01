@@ -1,11 +1,13 @@
 const jwt = require('jsonwebtoken');
+require('dotenv').config();
 const key = process.env.Password;
 
+
 const authMiddleware = (req,res,next) => {
-    const authHeader = req.header.authorization;
+    const authHeader = req.headers.authorization;
 
     if(!authHeader || !authHeader.startsWith('Bearer')) {
-        res.status(403).json({});
+        return res.status(403).json({});
     }
 
     const token = authHeader.split(' ')[1];
@@ -16,7 +18,7 @@ const authMiddleware = (req,res,next) => {
         next();
     }
     catch(e) {
-        res.status(403).json({});
+        return res.status(403).json({});
     }
 };
 
