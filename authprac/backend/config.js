@@ -1,3 +1,3 @@
 module.exports = {
-    JWT_SECRET: "zaidy"
-}
+    JWT_SECRET: "zaid-server",
+};
